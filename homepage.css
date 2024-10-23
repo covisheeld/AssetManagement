@@ -1,0 +1,236 @@
+/* Importing Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model across browsers */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9; /* Light grey background */
+    color: #333; /* Dark grey text */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    line-height: 1.6; /* Set consistent line-height globally */
+}
+
+h1, h2, h3 {
+    color: #4CAF50; /* Green accent for headings */
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #333; /* Dark grey navbar */
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    list-style: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #fff; /* White text on navbar */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #4CAF50; /* Green on hover */
+}
+
+/* Introduction Section */
+.introduction {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'),
+                      linear-gradient(to right, rgba(76, 175, 80, 0.8), rgba(109, 213, 237, 0.8)); /* Green gradient */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+    background-blend-mode: overlay;
+}
+
+.introduction h1 {
+    font-size: 48px;
+}
+
+.introduction p {
+    font-size: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 15px 25px;
+    margin-top: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    background-color: #fff; /* White background */
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.feature-item {
+    padding: 30px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pricing Section */
+.pricing {
+    background-color: #fff; /* White background */
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.pricing-item {
+    padding: 30px;
+    border: 2px solid #4CAF50; /* Green border for pricing items */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background for pricing cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-item h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pricing-item .price {
+    font-size: 36px;
+    color: #4CAF50; /* Green price */
+    margin-bottom: 30px;
+}
+
+.pricing-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-item ul li {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+/* Contact Section */
+.contact {
+    background-color: white;
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark grey footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #4CAF50; /* Green hover effect */
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .feature-grid, .pricing-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .introduction h1 {
+        font-size: 36px;
+    }
+
+    .introduction p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+    }
+}

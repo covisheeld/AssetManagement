@@ -1,0 +1,22 @@
+// Add interactivity if needed
+document.addEventListener('DOMContentLoaded', () => {
+    const dropbtns = document.querySelectorAll('.dropbtn');
+    dropbtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const content = e.target.nextElementSibling;
+            content.classList.toggle('show');
+        });
+    });
+});
+
+// Close dropdowns if clicked outside
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(dropdown => {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    }
+};
